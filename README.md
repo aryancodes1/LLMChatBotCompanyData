@@ -15,7 +15,7 @@ For the backend, I chose LangChain due to its flexibility in creating custom ret
 The user interface is developed using Streamlit, enabling intuitive interaction and display of comparative insights.
 
 ### Vector Store
-I opted to use Faiss as the vector store for managing and querying document embeddings locally, ensuring fast and efficient retrieval operations.
+I opted to use Chromadb as the vector store for managing and querying document embeddings locally, ensuring fast and efficient retrieval operations.
 
 ### Embedding Model
 To generate document embeddings from PDF content, I implemented a locally running embedding model. This approach maintains data privacy and eliminates dependency on external APIs.
