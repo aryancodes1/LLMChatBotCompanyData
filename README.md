@@ -38,7 +38,7 @@ I developed a robust document parsing module to extract text and structure from 
 The embedding model generates embeddings for each document, representing their content in a vector space.
 
 ### Vector Store Integration
-Faiss was configured to store and manage these document embeddings, facilitating efficient querying and comparison tasks.
+ChromaDb was configured to store and manage these document embeddings, facilitating efficient querying and comparison tasks.
 
 ### Query Engine Configuration
 I set up a query engine to retrieve and compare documents based on their embeddings, enabling detailed analysis and highlighting differences.
@@ -50,9 +50,10 @@ The local Language Model is seamlessly integrated to provide contextual insights
 I designed and implemented a user-friendly chatbot interface using Streamlit, allowing users to interact with the system, query information, and compare data across the documents.
 
 
-Outcome and Guidelines
+## Outcome and Guidelines
+
 The Content Engine architecture is designed to be scalable and modular, capable of handling additional documents and functionalities.
-Using a locally running LLM and Faiss for vector storage ensures data privacy and reduces reliance on external APIs.
+Using a locally running LLM (Ollama )and Chromadb for vector storage ensures data privacy and reduces reliance on external APIs.
 
 ## Interface LLM Results
 
