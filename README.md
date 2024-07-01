@@ -1,8 +1,5 @@
 # LLM ChatBot CompanyData
 
-Certainly! Creating a README file for your Content Engine project is crucial for guiding users and developers through the setup, functionalities, and usage of the system. Below is a structured template you can use to create your README file:
-
----
 
 # Content Engine
 
