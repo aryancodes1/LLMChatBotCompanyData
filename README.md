@@ -2,77 +2,57 @@
 
 
 # Content Engine
+Welcome to the Content Engine project! This system is designed to analyze and compare multiple PDF documents, specifically focusing on Form 10-K filings of multinational companies. It leverages Retrieval Augmented Generation (RAG) techniques to retrieve, assess, and generate insights from these documents.
 
-The Content Engine is a system designed to analyze and compare multiple PDF documents, specifically focusing on Form 10-K filings of multinational companies. It utilizes Retrieval Augmented Generation (RAG) techniques to retrieve, assess, and generate insights from these documents.
-
-## Table of Contents
-1. [Setup](#setup)
-   - [Backend Framework](#backend-framework)
-   - [Frontend Framework](#frontend-framework)
-   - [Vector Store](#vector-store)
-   - [Embedding Model](#embedding-model)
-   - [Local Language Model (LLM)](#local-language-model-llm)
-2. [Initialization](#initialization)
-   - [Provided Documents](#provided-documents)
-3. [Development](#development)
-   - [Document Parsing](#document-parsing)
-   - [Vector Generation](#vector-generation)
-   - [Vector Store Integration](#vector-store-integration)
-   - [Query Engine Configuration](#query-engine-configuration)
-   - [LLM Integration](#llm-integration)
-   - [Chatbot Interface](#chatbot-interface)
-4. [Interface Sample](#interface-sample)
-5. [Expected Outcome/Guidelines](#expected-outcomeguidelines)
-6. [Repository Link](#repository-link)
-7. [Documentation](#documentation)
+## Overview
+The Content Engine is built to handle complex document comparisons and provide interactive insights through a chatbot interface. It utilizes advanced frameworks and technologies to ensure efficient document parsing, embedding generation, and contextual analysis.
 
 ## Setup
-
 ### Backend Framework
-Choose between LlamaIndex or LangChain based on your preference and project requirements:
-- **LlamaIndex:** A flexible framework for creating custom retrieval systems.
-- **LangChain:** A toolkit focused on retrieval-augmented generation with strong LLM support.
+For the backend, I chose LangChain due to its flexibility in creating custom retrieval systems, which suited the project's needs well.
 
 ### Frontend Framework
-The user interface is built using Streamlit, an open-source app framework for creating interactive web applications.
+The user interface is developed using Streamlit, enabling intuitive interaction and display of comparative insights.
 
 ### Vector Store
-Choose a vector store to manage and query document embeddings locally:
-- Options include ChromaDB, Pinecone, Faiss, Milvus, Weaviate, etc.
+I opted to use Faiss as the vector store for managing and querying document embeddings locally, ensuring fast and efficient retrieval operations.
 
 ### Embedding Model
-Select an embedding model to generate vectors from PDF content locally, ensuring no reliance on external services.
+To generate document embeddings from PDF content, I implemented a locally running embedding model. This approach maintains data privacy and eliminates dependency on external APIs.
 
 ### Local Language Model (LLM)
-Integrate a local instance of a Large Language Model for contextual insights, ensuring data privacy.
+Integration of a local instance of a Large Language Model enhances the system's ability to provide contextual insights directly from the document content.
 
-## Initialization
+### Initialization
+Provided Documents
+The system is initialized with Form 10-K filings from three major companies:
 
-### Provided Documents
-The system is initialized with Form 10-K filings of three multinational companies:
-1. Alphabet Inc.
-2. Tesla, Inc.
-3. Uber Technologies, Inc.
-
-## Development
-
-### Document Parsing
-Extract text and structure from PDFs to prepare them for analysis.
+Alphabet Inc.
+Tesla, Inc.
+Uber Technologies, Inc.
+Development Details
+Document Parsing
+I developed a robust document parsing module to extract text and structure from PDF files accurately.
 
 ### Vector Generation
-Generate embeddings (vectors) from document content using the selected embedding model.
+The embedding model generates embeddings for each document, representing their content in a vector space.
 
 ### Vector Store Integration
-Persist embeddings locally using the chosen vector store for efficient querying.
+Faiss was configured to store and manage these document embeddings, facilitating efficient querying and comparison tasks.
 
 ### Query Engine Configuration
-Set up tasks to retrieve and compare documents based on their embeddings.
+I set up a query engine to retrieve and compare documents based on their embeddings, enabling detailed analysis and highlighting differences.
 
 ### LLM Integration
-Integrate a local instance of a Large Language Model to provide contextual insights and generate information summaries.
+The local Language Model is seamlessly integrated to provide contextual insights and answer complex queries about the documents.
 
 ### Chatbot Interface
-Implement a Streamlit-based chatbot interface for user interaction, allowing users to query and compare information across documents.
+I designed and implemented a user-friendly chatbot interface using Streamlit, allowing users to interact with the system, query information, and compare data across the documents.
+
+
+Outcome and Guidelines
+The Content Engine architecture is designed to be scalable and modular, capable of handling additional documents and functionalities.
+Using a locally running LLM and Faiss for vector storage ensures data privacy and reduces reliance on external APIs.
 
 ## Interface LLM Results
 
