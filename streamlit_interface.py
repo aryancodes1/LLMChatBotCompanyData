@@ -1,6 +1,9 @@
 import streamlit as st
 import ollama
-from data_loading import collection
+from data_loading import collection,load_data
+import os
+import tempfile
+
 
 def get_bot_response(user_input):
 
@@ -10,8 +13,9 @@ def get_bot_response(user_input):
     data = results["documents"][0][0]
 
     output = ollama.generate(
-        model="llama2",
+        model="llama3",
         prompt=f"Using this data: {data}. Respond to this prompt: {prompt}",
+
     )
 
     return output["response"]
@@ -21,6 +25,16 @@ def main():
     st.title("Chat Bot API")
     history = []
     # Input text box for user input
+    uploaded_file = st.file_uploader('Choose your .pdf file', type="pdf")
+
+    if uploaded_file:
+        temp_dir = tempfile.mkdtemp()
+        path = os.path.join(temp_dir, uploaded_file.name)
+        with open(path, "wb") as f:
+                f.write(uploaded_file.getvalue())
+
+    load_data(path,'a')
+
     user_input = st.text_input("Enter your message:")
 
     if st.button("Send"):
@@ -41,5 +55,4 @@ def main():
         st.text(f"Output {idx + 1}: {entry['output']}")
         st.markdown("---")
 
-if __name__ == "__main__":
-    main()
+main()

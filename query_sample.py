@@ -11,7 +11,7 @@ data = results["documents"][0][0]
 
 
 output = ollama.generate(
-    model="llama2", prompt=f"Using this data: {data}. Respond to this prompt: {prompt}"
+    model="llama3", prompt=f"Using this data: {data}. Respond to this prompt: {prompt}"
 )
 
 print(output["response"])
