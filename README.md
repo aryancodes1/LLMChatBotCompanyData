@@ -61,5 +61,5 @@ Using a locally running LLM (Ollama )and Chromadb for vector storage ensures dat
 ](Result1.png)
 ![
 ](Result2.png)
-![alt text](Result3.png)
+
 
