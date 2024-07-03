@@ -1,0 +1,6 @@
+streamlit
+ollama
+ollama pull llama3
+langchain
+langchain_community
+PyMuPDF
