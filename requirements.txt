@@ -1,6 +1,6 @@
 streamlit
 ollama
-ollama pull llama3
+chromadb
 langchain
 langchain_community
 PyMuPDF
