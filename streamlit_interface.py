@@ -76,18 +76,15 @@ def main():
             st.write("Loading")
         
 
-    user_input = st.text_input("Enter your message:")
+    user_input = st.chat_input("Enter your message:")
 
-    if st.button("Send"):
-        if user_input:
+    if user_input:
+            with st.chat_message('AI'):
             # Get chatbot response
-            bot_response = get_bot_response(user_input)
-            
-            # Append input and output to history
-            history.append({"input": user_input, "output": bot_response})
+                bot_response = get_bot_response(user_input)
 
-            # Display bot response
-            st.text_area("Bot's Response:", value=bot_response, height=100)
+                # Display bot response
+                st.write(bot_response)
 
     # Display history
     st.header("Chat History")
